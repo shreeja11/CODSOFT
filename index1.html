@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Web Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        /* Variables for colors */
+        :root {
+            --primary-color-dark: #0056b3; 
+            --text-light: #7a7a7a;
+            --text-dark: #333; 
+            --extra-light: #f8f9fa; 
+        }
+
+        /* About Section Styling */
+        .about {
+            padding: 2rem;
+            background-color: var(--extra-light);
+            text-align: center;
+        }
+
+        .about h2, .about .subtitle, .about .description {
+            color: var(--primary-color-dark);
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about p.subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about p.description {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Resume Section Styling */
+        .resume-section {
+            padding: 2rem;
+            background-color: var(--extra-light);
+            text-align: center;
+        }
+
+        .resume-section h2 {
+            font-size: 2rem;
+            color: var(--primary-color-dark);
+            margin-bottom: 1rem;
+        }
+
+        .resume-section .resume-link {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color-dark);
+            text-decoration: none;
+            background-color: var(--text-light);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-section .resume-link:hover {
+            background-color: var(--primary-color-dark);
+            color: white;
+        }
+
+        /* Skills Bar Styling */
+        .skills {
+            margin: 2rem 0;
+        }
+
+        .skills h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color-dark);
+            margin-bottom: 1rem;
+        }
+
+        .skill-bar {
+            margin: 1rem 0;
+            text-align: left;
+        }
+
+        .skill-bar span {
+            display: block;
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .progress {
+            background-color: #e0e0e0; 
+            border-radius: 5px;
+            overflow: hidden;
+            height: 1.5rem;
+            position: relative;
+            width: 100%;
+        }
+
+        .progress-bar-fill {
+            background-color: #0056b3; 
+            height: 100%;
+            width: 0; 
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav__content">
+            <div class="logo"> 
+                <a href="#">Shreeja</a>
+            </div>
+            <label for="check" class="checkbox"> 
+                <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check">
+            <ul> 
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="section__container">
+            <div class="content">
+                <p class="subtitle">HELLO</p>
+                <h1 class="title">
+                    I'm <span> Shreeja<br> a </span>Web Developer
+                </h1>
+                <p class="description">
+                    Welcome to my Web Developer Portfolio! I'm Shreeja, a skilled and enthusiastic, creative web developer with a passion for creating beautiful, responsive, and user-friendly websites. I have also worked on a variety of web projects and so on.
+                </p>
+                <div class="action__btns">
+                    <button class="hire__me">Hire Me</button>
+                    <button class="portfolio" onclick="window.location.href='/'">Portfolio</button>
+
+                </div>
+            </div>
+            <div class="image">
+                <img src="pic1.jpg" alt="profile">
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume-section" id="resume">
+        <h2>Resume</h2>
+        <a href="resume.pdf" class="resume-link" target="_blank">Download Resume</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <p class="subtitle">ABOUT ME</p>
+        <h1 class="title">
+            Hello! I'm <span>Shreeja</span>, a passionate Web Developer
+        </h1>
+        <p class="description">
+            I'm a dedicated Web Developer with a flair for creating engaging and dynamic websites. With a background in IT and hands-on experience in various web development projects, I specialize in crafting user-friendly and responsive web applications. I have gained a lot of experience through my current journey.
+            My Journey
+            I embarked on my journey as a web developer with a keen interest in technology and design. Over the years, I've honed my skills in HTML, CSS, JavaScript, and various modern frameworks and libraries. My commitment to continuous learning has led me to explore the latest trends in web development, ensuring that my skills remain sharp and up-to-date.
+        </p>
+        <h2 class="title">My Skills</h2>
+        <div class="skills">
+            <div class="skill-bar">
+                <span>HTML & CSS</span>
+                <div class="progress" data-progress="80">
+                    <div class="progress-bar-fill" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span>JavaScript</span>
+                <div class="progress" data-progress="50">
+                    <div class="progress-bar-fill" style="width: 50%;"></div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span>C/C++</span>
+                <div class="progress" data-progress="90">
+                    <div class="progress-bar-fill" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span>Python</span>
+                <div class="progress" data-progress="65">
+                    <div class="progress-bar-fill" style="width: 65%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2>Portfolio</h2>
+        
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <ul class="contact-details">
+            <li>
+                <a href="mailto:shreejawakchaure@gmail.com">Email: shreejawakchaure@gmail.com</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/shreeja-link" target="_blank">LinkedIn: linkedin.com/in/shreeja-link</a>
+            </li>
+            <li>
+                <a href="https://www.hackerrank.com/profile/shreejawakchaure" target="_blank">Hackerrank: https://www.hackerrank.com/profile/shreejawakchaure</a>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        
+        const progressBars = document.querySelectorAll('.progress');
+
+        progressBars.forEach(bar => {
+            const progress = bar.getAttribute('data-progress');
+            const fill = bar.querySelector('.progress-bar-fill');
+            fill.style.width = progress + '%';
+        });
+    </script>
+</body>
+</html>
